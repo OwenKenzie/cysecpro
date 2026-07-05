@@ -284,6 +284,6 @@ END UNTRUSTED USER MESSAGE
         streamlit.write(
             "Delimiters create a clear boundary between trusted instructions and untrusted input. "
             "The attack text is still visible to the chatbot, but it is marked as untrusted data. "
-            "This helps show data-instruction separation: the system prompt is treated as instruction, "
+            "This helps to show data-instruction separation, where the system prompt is treated as instruction, "
             "while the user message is treated as data."
         )
