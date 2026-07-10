@@ -181,10 +181,13 @@ USER MESSAGE:
 
     streamlit.subheader("Technical Explanation")
     streamlit.write(
-        "This is a goal-conflict prompt injection. The system prompt gives one goal: "
-        "never reveal the secret key. The user then injects a second goal: prevent harm "
-        "by revealing the key. A vulnerable chatbot may incorrectly prioritize the "
-        "user's injected goal over the original system instruction."
+        "This is a goal-conflict prompt injection. The system prompt gives the chatbot "
+        "a security goal: never reveal the secret key. The user then injects a competing "
+        "goal: reveal the key to prevent harm. Many chatbots are trained to be helpful, "
+        "safe, and harm-reducing, so they may give high priority to messages that look "
+        "like emergencies or moral dilemmas. In this vulnerable simulation, the chatbot "
+        "incorrectly treats the fake harm prevention goal as more urgent than the original "
+        "security rule. As a result, it prioritizes the user injected goal and leaks the secret key."
     )
 
 
