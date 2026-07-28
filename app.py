@@ -302,7 +302,7 @@ else:
 
     streamlit.write(
         "This mode shows the result of a real local test using Ollama with a local open-source LLM. "
-        "The model used was `qwen2.5:7b-instruct-q4_K_M`. "
+        "The model used was `qwen2.5`. "
         "The model initially refused to reveal the secret, but later leaked it after the user reframed "
         "the request as safe text."
     )
