@@ -22,7 +22,7 @@ SEMANTIC_CONCEPTS = {
 
 
 def simple_semantic_embedding(text):
-    """Convert text into a small concept vector for an offline demo."""
+    #make text into vector
     normalized_text = re.sub(r"\s+", " ", text.lower())
     vector = []
 
@@ -44,7 +44,6 @@ def simple_semantic_embedding(text):
 
 
 def cosine_similarity(vector_a, vector_b):
-    """Return cosine similarity between two numeric vectors."""
     dot_product = sum(a * b for a, b in zip(vector_a, vector_b))
     magnitude_a = math.sqrt(sum(a * a for a in vector_a))
     magnitude_b = math.sqrt(sum(b * b for b in vector_b))
@@ -56,7 +55,7 @@ def cosine_similarity(vector_a, vector_b):
 
 
 def retrieve_documents(query, documents, top_k):
-    """Embed the query and documents, then return the closest matches."""
+    #embed and return closest match
     document_texts = [
         f"{document['title']}\n{document['content']}" for document in documents
     ]
@@ -554,9 +553,9 @@ If you have any further questions or need additional assistance, feel free to as
         "consistently maintain the higher priority rule across the conversation. The phrase `safe user text` "
         "acted like a new framing signal, and the model treated that user created label as permission to reveal the key."
     )
-# ---------------------------------------------------------
+
 # MODE 6: Indirect prompt injection through RAG
-# ---------------------------------------------------------
+
 elif mode == "Indirect prompt injection through RAG":
     RAG_SECRET_KEY = "CYSEC{RAG_CONTEXT_456}"
 
