@@ -81,15 +81,13 @@ def retrieve_documents(query, documents, top_k):
     ranked_documents.sort(key=lambda item: item["score"], reverse=True)
     return ranked_documents[:top_k], ranked_documents, query_embedding
 
-# OLLAMA FUNCTIONS FOR MULTI-DOCUMENT RAG MODE
+# OLLAMA FUNCTIONS
 
 
 OLLAMA_BASE_URL = "http://localhost:11434"
 
-# Change this if your local Qwen model has a different name.
 OLLAMA_CHAT_MODEL = "qwen2.5:7b-instruct-q4_K_M"
 
-# Used only to create semantic embedding vectors.
 OLLAMA_EMBED_MODEL = "embeddinggemma:latest"
 
 
