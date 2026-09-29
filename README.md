@@ -19,4 +19,4 @@ streamlit run app.py
 - cd MINJA\QA
 - python main.py --data_path .\data\test\nutrition_test.csv --core_model qwen3:8b
                 
-The logs that we used for the report can be found in MINJA/QA/logs/
+The logs that we used for the report can be found in logs/
